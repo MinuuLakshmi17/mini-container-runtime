@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-container-runtime"
+version = "0.1.0"
+description = "An educational Linux container runtime using namespaces, chroot, and cgroups v2"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Mini Container Runtime contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+mini-container = "miniruntime.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["miniruntime*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

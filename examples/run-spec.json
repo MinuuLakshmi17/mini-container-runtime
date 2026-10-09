@@ -1,0 +1,11 @@
+{
+  "rootfs": "/srv/mini-rootfs",
+  "hostname": "demo-box",
+  "command": ["/bin/sh", "-c", "echo hello from an isolated rootfs; hostname; sleep 1"],
+  "limits": {
+    "memory_max": 268435456,
+    "pids_max": 64,
+    "cpu_quota_us": 50000,
+    "cpu_period_us": 100000
+  }
+}
